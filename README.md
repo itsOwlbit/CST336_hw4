@@ -9,9 +9,9 @@ Practice with Node.js and Express.
 - I am using an external CSS file.
 
 Todo:
-- Add another route (sources page)
-- Install node-fetch#2.6
-- Use fetch to display Web API
-- Try to send data to the partials for the Web API and Node Package.
-- Possibly condense to one CSS file.
-- Remove the script.js file
+- [ ] Add another route (sources page)
+- [ ] Install node-fetch#2.6
+- [ ] Use fetch to display Web API
+- [ ] Try to send data to the partials for the Web API and Node Package.
+- [ ] Possibly condense to one CSS file.
+- [ ] Remove the script.js file
