@@ -1,1 +1,181 @@
+body {
+  background-color: #cee6f9;
+  color:  #4f6c84;
+  font-family: 'Merriweather', serif;
+  max-width: 800px;
+  margin: 0 auto;
 
+  display: grid;
+  grid-template-rows: minmax(min-content, max-content);
+}
+
+header, footer {
+  padding: 40px 0;
+}
+
+main {
+padding: 10px 0;
+}
+
+header {
+  font-family: 'Montserrat', sans-serif;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  color: rgb(208, 172, 118);
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all .25s;
+}
+
+a:hover {
+  color: rgb(205, 157, 87);
+}
+
+h1, h2, h3 {
+  color: #5ba4e0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  padding: 8px 0;
+  margin: 0;
+}
+
+p {
+  line-height: 1.8;
+}
+
+figure {
+  border: 1px #fff solid;
+  border-radius: 10px;
+  margin: 20px 50px;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  background-color: #fff;
+  border: 1px #fff solid;
+  opacity: 60%;
+  padding: 10px;
+}
+
+code {
+  display: block;
+  width:fit-content;
+}
+
+table {
+  border: 1px #fff solid;
+  margin: 16px 50px;
+  border-radius: 10px;
+}
+
+td {
+  padding: 5px;
+  text-align: center;
+}
+
+var {
+  font-size: 1.2em;
+}
+
+footer {
+  text-align: center;
+}
+
+/********** header section **********/
+
+.header-logo {
+  font-size: 1.5em;
+}
+
+.nav-links {
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 10px;
+  margin-left: 5px;
+}
+
+.nav-links:hover, .nav-links-active {
+  background-color: #4f6c84;
+  color: #fff;
+}
+
+/********** main section **********/
+
+.vocabulary {
+  font-weight: 700;
+}
+
+.code {
+  background-color: rgb(235, 235, 235);
+  border: 2px solid #4f6c84;
+  border-radius: 10px;
+  color: #000;
+  font-family: 'Source Code Pro', monospace;
+  white-space: normal;
+  margin: 20px 50px;
+  padding: 16px;
+}
+
+.table-header {
+  font-weight: bold;
+}
+
+/********** footer section **********/
+
+.footer-logo {
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+}
+
+.footer-text {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+/********** media query section *********/
+
+/* for tablets */
+@media (max-width: 992px) {
+  body {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  header {
+    flex-direction: column;
+    align-content: space-between;
+  }
+
+  nav {
+    padding: 30px 0 0 0;
+  }
+}
+
+/* for phones */
+@media (max-width: 768px) {
+  body {
+    margin: 0 20px;
+    transition: all 0.25s linear;
+  }
+
+  .nav-links {
+    font-size: 0.8em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+}

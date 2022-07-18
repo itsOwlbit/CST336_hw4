@@ -1,0 +1,48 @@
+/********** digimon section *********/
+
+#digimon-section {
+  background-color: azure;
+  border: 3px #aaaaaa solid;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+  width: max-content;
+}
+
+#digimon-title {
+  font-size: 1.7rem;
+}
+
+#digimon-div {
+  align-items: center;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  width: auto;
+}
+
+#digimon-img {
+  height: 100px;
+  mix-blend-mode: multiply;
+  width: auto;
+}
+
+#digimon-text {
+  color: #6288af;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  padding-left: 10px;
+}
+
+#digimon-caption {
+  font-size: .8rem;
+  padding-top: 5px;
+}
+
+#digimon-link {
+  font-weight: bold;
+  text-decoration: none;
+}

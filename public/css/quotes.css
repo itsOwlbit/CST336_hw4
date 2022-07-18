@@ -1,0 +1,14 @@
+/********** quote section **********/
+
+#quote {
+  color: #606060;
+  background-color: azure;
+  border: 2px silver solid;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+  width: 500px;
+}
