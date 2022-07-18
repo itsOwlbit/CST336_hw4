@@ -1,0 +1,81 @@
+<%- include('partials/header') %>
+
+<%- include('partials/navbar') %>
+
+<main>
+  <section>
+    <h1>Circular Linked List (LL)</h1>
+    <p>
+      The circular linked list creates a loop starting from the head to the last node in
+      the list.  The last node's next pointer points to the same node the head points to, 
+      thus creating a circular loop.
+    </p>
+    <figure>
+      <img src="img/circular-linked-list.png" alt="Circular linked list Structure.">
+      <figcaption>A Circular Linked List Structure</figcaption>
+    </figure>
+  </section>
+
+<%- include('partials/quote') %>
+  
+  <section>
+    <h2>The Node Structure</h2>
+    <p>
+      The cirular linked list can have the same node structure as a singly linked list node,
+      or it can have the doubly link list node structure.
+    </p>
+    <h3>Singly Node Structure</h3>
+    <pre class="code">
+      <code>struct node</code>
+      <code>{</code>
+      <code>&emsp; int data;</code>
+      <code>&emsp; struct node *next;</code>
+      <code>};</code>
+    </pre>
+    <h3>Doubly Node Structure</h3>
+    <pre class="code">
+      <code>struct node</code>
+      <code>{</code>
+      <code>&emsp; int data;</code>
+      <code>&emsp; struct node *next;</code>
+      <code>&emsp; struct node *prev;</code>
+      <code>};</code>
+    </pre>
+  </section>
+
+<%- include('partials/digimon') %>
+  
+  <section>
+    <h2>Sample Code</h2>
+    <p>
+      Code below shows how to create a three-member circular singly linked list.
+    </p>
+    <pre class="code">
+      <code>/*Initialize nodes */</code>
+      <code>struct node *head</code>
+      <code>struct node *one = NULL;</code>
+      <code>struct node *two = NULL;</code>
+      <code>struct node *three = NULL;</code>
+      <br />
+      <code>/* Allocate memory */</code>
+      <code>one = malloc(sizeof(struct node));</code>
+      <code>two = malloc(sizeof(struct node));</code>
+      <code>three = malloc(sizeof(struct node));</code>
+      <br />
+      <code>/* Assign data values */</code>
+      <code>one->data = 1;</code>
+      <code>two->data = 2;</code>
+      <code>three->data = 3;</code>
+      <br />
+      <code>/* Connect nodes */</code>
+      <code>one->next = two;</code>
+      <code>two->next = three;</code>
+      <code>three->next = one;</code>
+      <br />
+      <code>/* Save address of first node in head */</code>
+      <code>head = one;</code>
+    </pre>
+  </section>
+</main>
+
+<%- include('partials/footer') %>  

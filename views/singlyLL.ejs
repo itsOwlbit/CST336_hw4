@@ -1,0 +1,70 @@
+<%- include('partials/header') %>
+
+<%- include('partials/navbar') %>
+
+<main>
+  <section>
+    <h1>Singly Linked List (LL)</h1>
+    <p>
+      The singly LL is the most common type of linked list.  There is a head that points to the first
+      node in the list.  The last node in the list is the tail.  New nodes are added to the tail and
+      become the new tail of the list.  Traversing the list is only in one direction, from the head
+      towards the tail.
+    </p>
+    <figure>
+      <img src="img/linked-list-concept.png" alt="Single linked list structure.">
+      <figcaption>A Singly Linked List Structure</figcaption>
+    </figure>
+  </section>
+  <section>
+    <h2>The Node Struture</h2>
+    <p>
+      A node can be created using a struct that has a data variable and a pointer variable as seen below.
+    </p>
+    <pre class="code">
+      <code>struct node</code>
+      <code>{</code>
+      <code>&emsp; int data;</code>
+      <code>&emsp; struct node *next;</code>
+      <code>};</code>
+    </pre>
+  </section>
+
+<%- include('partials/quote') %>
+  
+  <section>
+    <h2>Sample Code</h2>
+    <figure>
+      <img src="img/linked-list-with-data.png" alt="Sample code representation.">
+      <figcaption>Sample Code Representation</figcaption>
+    </figure>
+    <p>
+      Code below shows how to create a three-member singly linked list.
+    </p>
+    <pre class="code">
+      <code>/*Initialize nodes */</code>
+      <code>struct node *head</code>
+      <code>struct node *one = NULL;</code>
+      <code>struct node *two = NULL;</code>
+      <code>struct node *three = NULL;</code>
+      <br />
+      <code>/* Allocate memory */</code>
+      <code>one = malloc(sizeof(struct node));</code>
+      <code>two = malloc(sizeof(struct node));</code>
+      <code>three = malloc(sizeof(struct node));</code>
+      <br />
+      <code>/* Assign data values */</code>
+      <code>one->data = 1;</code>
+      <code>two->data = 2;</code>
+      <code>three->data = 3;</code>
+      <br />
+      <code>/* Save address of first node in head */</code>
+      <code>head = one;</code>
+    </pre>
+  </section>
+
+<%- include('partials/digimon') %>
+  
+</main>
+
+<%- include('partials/footer') %>

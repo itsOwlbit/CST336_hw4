@@ -1,1 +1,79 @@
+<%- include('partials/header') %>
 
+<%- include('partials/navbar') %>
+  
+<main>
+    
+  <section>
+    <h1>Introduction to Linked Lists (LL)</h1>
+    <p>
+      A linked list (LL) is a linear data structure that links <span class="vocabulary">nodes</span>
+      in a series.  Each node contains a data part and an address part.  The address part
+      is a pointer to the next node in the series.
+    </p>
+    <figure>
+      <img src="img/linked-list-concept.png" alt="Linked list data strcuture.">
+      <figcaption>The Linked List Data Structure</figcaption>
+    </figure>
+    <p>
+      The starting node of the chain is called a <span class="vocabulary">head</span>.  It only contains
+      a pointer to the next node, but does not have any data.  The last node in the chain is called the
+      <span class="vocabulary">tail</span>, which does have data and a pointer to null.
+    </p>
+  </section>
+
+<%- include('partials/digimon') %>
+  
+  <section>
+    <h2>Uses for a Linked List (LL)</h2>
+    <ul>
+      <li>Creates a dynamically allocated list</li>
+      <li>Can be used to implement a stack and queue</li>
+    </ul>
+  </section>
+
+<%- include('partials/quote') %>
+  
+  <section>
+    <h2>Time and Space Complexity</h2>
+    <table class="complexity-table">
+      <tr>
+        <td></td>
+        <td>Worse Case</td>
+        <td>Average Case</td>
+      </tr>
+      <tr>
+        <td class="table-header">Search</td>
+        <td><var>0(n)</var></td>
+        <td><var>0(n)</var></td>
+      </tr>
+      <tr>
+        <td class="table-header">Insert</td>
+        <td><var>0(1)</var></td>
+        <td><var>0(1)</var></td>
+      </tr>
+      <tr>
+        <td class="table-header">Deletion</td>
+        <td><var>0(1)</var></td>
+        <td><var>0(1)</var></td>
+      </tr>
+    </table>          
+  </section>
+  <section>
+    <h2>Types of Linked Lists (LL)</h2>
+    <ul>
+      <li><a href="singlyLL.html">Singly LL</a> - Traverse in one direction only.</li>
+      <li><a href="doublyLL.html">Doubly LL</a> - Can traverse forward and backwards.</li>
+      <li><a href="circularLL.html">Circular LL</a> - Can traverse forward and backwards in a loop.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Sources</h2>
+    <ul>
+      <li><a class="source-name" href="https://www.programiz.com/dsa/linked-list" target="_blank">Programiz</a></li>
+    </ul>
+  </section>
+    
+</main>
+
+<%- include('partials/footer') %>

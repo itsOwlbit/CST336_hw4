@@ -1,0 +1,76 @@
+<%- include('partials/header') %>
+
+<%- include('partials/navbar') %>
+
+<main>
+  <section>
+    <h1>Doubly Linked List (LL)</h1>
+    <p>
+      A doubly linked list gives more flexibility in being able to traverse the list forwards and
+      backwards as long as a pointers are used to save node positions.
+    </p>
+    <figure>
+      <img src="img/doubly-linked-list-concept.png" alt="Double linked list structure.">
+      <figcaption>A Doubly Linked List Structure</figcaption>
+    </figure>
+  </section>
+  <section>
+    <h2>The Node Structure</h2>
+    <p>
+      The doubly linked list has an additional prev (previous) pointer which helps traverse
+      the list backwards by pointing to the previous node.
+    </p>
+    <pre class="code">
+      <code>struct node</code>
+      <code>{</code>
+      <code>&emsp; int data;</code>
+      <code>&emsp; struct node *next;</code>
+      <code>&emsp; struct node *prev;</code>
+      <code>};</code>
+    </pre>
+  </section>
+
+<%- include('partials/digimon') %>
+  
+  <section>
+    <h2>Sample Code</h2>
+    <p>
+      Code below shows how to create a three-member doubly linked list.
+    </p>
+    <pre class="code">
+      <code>/*Initialize nodes */</code>
+      <code>struct node *head</code>
+      <code>struct node *one = NULL;</code>
+      <code>struct node *two = NULL;</code>
+      <code>struct node *three = NULL;</code>
+      <br />
+      <code>/* Allocate memory */</code>
+      <code>one = malloc(sizeof(struct node));</code>
+      <code>two = malloc(sizeof(struct node));</code>
+      <code>three = malloc(sizeof(struct node));</code>
+      <br />
+      <code>/* Assign data values */</code>
+      <code>one->data = 1;</code>
+      <code>two->data = 2;</code>
+      <code>three->data = 3;</code>
+      <br />
+      <code>/* Connect nodes */</code>
+      <code>one->next = two;</code>
+      <code>one->prev = NULL;</code>
+      <br />
+      <code>two->next = three;</code>
+      <code>two->prev = one;</code>
+      <br />
+      <code>three->next = NULL;</code>
+      <code>three->prev = two;</code>
+      <br />
+      <code>/* Save address of first node in head */</code>
+      <code>head = one;</code>
+    </pre>
+  </section>
+
+<%- include('partials/quote') %>
+  
+</main>
+
+<%- include('partials/footer') %>
