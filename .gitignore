@@ -1,0 +1,10 @@
+
+node_modules/*
+replit_zip_error_log.txt
+replit.nix
+public/.DS_Store
+public/css/.DS_Store
+public/img/.DS_Store
+views/.DS_Store
+views/partials/.DS_Store
+.DS_Store
