@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+
+<%- include('partials/navbar') %>
+  
+<main>
+  <section>
+    <h1>Website Sources</h1>
+    <p>This website was created in <a href="https://replit.com">replit</a>.  This website assignment is from <a href="https://hw1.owlbitcode.repl.co">hw1</a>, but remade to use Node.js with Express.  There is a route for each page link.  There are also 5 partials: header, navbar, footer, digimon, and quote.</p>
+  </section>
+  <br /><br />
+  <section>
+    <h3>Information and Image Sources</h3>
+    <ul>
+      <li><a class="source-name" href="https://www.programiz.com/dsa/linked-list" target="_blank">Programiz</a></li>
+    </ul>
+  </section>
+  <br /><br />
+  <section>
+    <h3><a href="https://digimon-api.herokuapp.com" target"_blank">Digimon Web API</a></h3>
+    <%- include('partials/digimon') %>
+  </section>
+  <br /><br />
+  <section>
+    <h3><a href="https://www.npmjs.com/package/hacker-quotes" target"_blank">hacker-quotes npm Package</a></h3>
+    <%- include('partials/quote') %>
+  </section>
+    
+</main>
+
+<%- include('partials/footer') %>

@@ -1,5 +1,11 @@
 <section id="digimon-section">
   <div id="digimon-title">Random Digimon</div>
-  <div id="digimon-div"></div>
-  <div id="digimon-caption">* <a id="digimon-link" href="https://digimon-api.herokuapp.com">Digimon API</a></div>
+  <div id="digimon-div">
+    <img id="digimon-img" src="<%= digimon.img %>" alt="">
+    <div id="digimon-text">
+      <strong>Name</strong>: <%= digimon.name %> <br />
+    <strong>Level</strong>: <%= digimon.level %>
+    </div>
+  </div>
+</div>
 </section>

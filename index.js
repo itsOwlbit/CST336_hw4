@@ -1,4 +1,5 @@
 const express = require('express');
+const fetch = require('node-fetch');
 const app = express();
 const path = require('path');
 
@@ -13,24 +14,34 @@ app.set('views', path.join(__dirname, '/views'));
 // specifies the folder for static files
 app.use(express.static(path.join(__dirname, '/public')));
 
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
   const quote = getRandomQuote();
-  res.render('index', { quote });
+  const digimon = await getDigimon();
+  res.render('index', { quote, digimon });
 });
 
-app.get('/singlyLL', (req, res) => {
+app.get('/singlyLL', async (req, res) => {
   const quote = getRandomQuote();
-  res.render('singlyLL', { quote });
+  const digimon = await getDigimon();
+  res.render('singlyLL', { quote, digimon });
 });
 
-app.get('/doublyLL', (req, res) => {
+app.get('/doublyLL', async (req, res) => {
   const quote = getRandomQuote();
-  res.render('doublyLL', { quote });
+  const digimon = await getDigimon();
+  res.render('doublyLL', { quote, digimon });
 });
 
-app.get('/circularLL', (req, res) => {
+app.get('/circularLL', async (req, res) => {
   const quote = getRandomQuote();
-  res.render('circularLL', { quote });
+  const digimon = await getDigimon();
+  res.render('circularLL', { quote, digimon });
+});
+
+app.get('/sources', async (req, res) => {
+  const quote = getRandomQuote();
+  const digimon = await getDigimon();
+  res.render('sources', { quote, digimon });
 });
 
 app.listen(3000, () => {
@@ -43,3 +54,18 @@ function getRandomQuote() {
 
   return data[index];
 };
+
+async function getDigimon() {
+    const url = "https://digimon-api.vercel.app/api/digimon";
+    const response = await fetch(url);
+    const data = await response.json();
+
+    return getRandomDigimon(data);
+}
+
+function getRandomDigimon(digimonList) {
+  const numOfDigimon = digimonList.length;
+  const randomIndex = Math.floor(Math.random() * numOfDigimon);
+
+  return digimonList[randomIndex];
+}
